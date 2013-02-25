@@ -1,0 +1,130 @@
+/*
+/////////////////////////////////////////////////
+Colour codes
+	-#AAAAAA - grey
+	-#333333 - mid grey
+	-#282828 - darker grey (text?)
+	-#E5CCFF - Light purple
+	-#A552FF - Dark purple
+	-#B297D1 - dull purple
+	
+ACTUALLCOLOURZZZ
+	-#a552ff -purple
+	-#bf85ff -purple
+	-#232222 -dark grey
+/////////////////////////////////////////////////
+*/
+body 
+	{
+		background-color :#e5ff5f;
+		/*url('**********') no-repeat center top; */	/* url('********.png') no-repeat topcenter//Main backgound, image goes here. */ 
+		font-family: georgia,sans-serif;
+		color:#333;
+		margin:0;
+		padding:0;
+	}
+#wrapper 
+	{
+		width:960px;
+		background-color:transparent; 
+		margin:0 auto;
+		border-left:1px hidden #ccc; /*hides the whole 'side lines' possible change to keep on the 'content section?' */ 
+		border-right:1px hidden #ccc;
+		border-top:0px hidden;
+	}
+#header
+	{
+		background-color:transparent;
+		width:960px;
+		height:150px;
+		margin:0 auto;
+		margin-bottom:25px hidden;
+		border-bottom:1px hidden ; /* hidden removes the annoying bar to give a 'seamless' header with the body */
+		border-top:1px hidden ;
+	}
+#header h2 
+	{
+		padding:10px;	
+	}
+#nav 
+	{
+		width:960px;
+		height:40px;
+		border-bottom:1px hidden #ccc;
+		background-color;#B297D1 ; 
+	}
+#nav a 
+	{		
+		display:block;
+		width:120px;
+		font-weight:bold;
+		color:#FFFFFF;
+		background-color:#B297D1;
+		text-align:center;
+		padding:4px;
+		text-decoration:none;
+		text-transform:uppercase;
+	}
+
+#nav a:hover 
+	{
+		background-color:#A552FF;
+		
+	}
+
+#nav ul
+	{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		overflow:hidden;
+	}
+	
+#nav li
+	{
+		float:left;
+	}
+	
+#content 
+	{
+		background-color:#B297D1;
+		width:675px;
+		float:left;
+		padding:10px;
+	}
+#sidebar 
+	{
+		width:200px;
+		float:right;
+		margin-bottom:25px;
+	}
+#sidebar a
+	{
+		text-decoration:none;
+	}
+#sidebar li 
+	{
+		list-style:none;
+	}
+#footer 
+	{
+		clear:both;
+		width:960px;
+		height:135px;
+		border-top:1px hidden #ccc;
+	}
+#footer p
+	{
+		padding:10px;
+	}
+	
+/* Formating text */
+T
+	{
+		color: red;
+	}
+
+O
+	{
+		color: blue;
+	}

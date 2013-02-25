@@ -1,0 +1,18 @@
+/*	********************************************* 
+	*			PLUS 1 WELCOME SCREEN			*
+	*********************************************
+	
+	Author:		Luke Cheeseman
+	Name:		Login_v1_1.php
+	Date:		12/01/2012
+	Description:	
+
+	This is the welcome screen for the game where the user will
+	be given and welcome message to the game and can then enter 
+	their name and then click progress to continue to the topic 
+	selection screen
+*/
+
+//This javascript is used to create a default page //
+
+//This javascript is used to validate the name field to ensure that theuser has entered a name//

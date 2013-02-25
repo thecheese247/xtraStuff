@@ -1,0 +1,64 @@
+<?php
+
+$Question=$_POST['Question'];
+$Answer=$_POST['Answer'];
+$TopicID=$_POST['Topic'];
+$Diff=$_POST['Difficulty'];
+
+/*
+$conn = MYSQL_CONNECT('localhost', 'root', '')
+			or die('Could not connect to server');
+	MYSQL_SELECT_DB('plus1', $conn)
+			or die('Could not select the database');
+
+$query="INSERT INTO question (Question, Answer, TopicID, Difficulty) VALUES ('" . $Question . "','" . $Answer . "','" . $TopicID . "','" . $Diff ."')";
+		$result=MYSQL_QUERY($query);
+*/
+echo
+"
+<HTML lang='en'>
+<HEAD>
+<LINK REL='stylesheet' HREF='Plus1.css' TYPE='text/css'>
+<TITLE>Add Question</TITLE>
+<META http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<SCRIPT Language='JavaScript' type='text/JavaScript' src='default.js'></SCRIPT>
+</HEAD>
+
+<BODY>
+
+<SCRIPT Language='JavaScript' type='text/JavaScript'>
+start();
+</SCRIPT>
+
+<DIV CLASS='AltBody'>
+
+	<H1>Your question has been added, click return to return to the topic slection screen<H1>
+	<br>
+	<DIV Class='Form'>
+	<DIV Class='Center'>The question was $Question</DIV>
+	<br>
+	<DIV Class='center'>The answer was $Answer</DIV>
+	<br>
+	<DIV Class='center'>The TopicID was $TopicID</DIV>
+	<br>
+	<DIV Class='center'>The difficulty was $Diff</DIV>
+	<br>
+	<DIV Class='center'>
+	<FORM METHOD='POST' ACTION='TopicSelection.php'>
+	<DIV Class='left'>
+		<INPUT TYPE='submit' Value='Return' class='button'>
+	</DIV>
+	</FORM>
+	<FORM METHOD='POST' ACTION='login.php'>
+	<DIV Class='right2'>
+		<INPUT TYPE='submit' Value='Add another question' name ='Addq' class='button'>
+	</DIV>
+	</FORM>
+	</DIV>
+	</DIV>
+</DIV>
+</BODY>
+</HTML>
+";
+
+?>

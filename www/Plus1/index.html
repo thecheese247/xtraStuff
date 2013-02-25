@@ -1,0 +1,72 @@
+<!--
+	********************************************* 
+	*			PLUS 1 WELCOME SCREEN			*
+	*********************************************
+	
+	Author:		Luke Cheeseman
+	Name:		welcome.html
+	Date:		20/01/2012
+	Description:	
+
+	This is the welcome screen for the game where the user will
+	be given and welcome message to the game and can then enter 
+	their name and then click progress to continue to the topic 
+	selection screen
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="en">
+<HEAD>
+<LINK REL="stylesheet" HREF="Plus1.css" TYPE="text/css">
+<TITLE>Welcome</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<SCRIPT Language="JavaScript" type="text/JavaScript" src="default.js"></SCRIPT>		
+<!--this line creates the default page-->
+</HEAD>
+
+<BODY>
+
+<SCRIPT Language="JavaScript" type="text/JavaScript">
+start();
+</SCRIPT>
+<SCRIPT Language="JavaScript" type="text/JavaScript" src="Validate.js"></SCRIPT>
+<!-- 
+this is the link to the javascript that can be called when a button is pressed,
+it checks the input boxes to ensure the user has inputted data
+-->
+<DIV CLASS="Body">
+	<DIV CLASS="big">
+	<H1>Welcome to Plus 1, please enter your name and click next to continue</H1>
+<!--
+this line writes a greeting message to the user instructing them on what to do to
+continue to the next screen, it uses the H1 tag and style. A line break follows
+this
+-->
+    	<br>
+ 	<DIV Class="Form">
+	<FORM METHOD="POST" ACTION="TopicSelection.php" onSubmit="return Validate(this)">
+	<DIV Class="Left">Enter Name Here:</Div>
+	<DIV Class="Right">
+		<INPUT TYPE="text" NAME="Name" Size=25 class="big">		
+	</DIV>
+	<br>
+	<br>
+	<DIV Class="Right2">	
+		<INPUT TYPE="submit" Name="Next" Value="Next>>" Class="button">
+	</DIV>
+	</FORM> 
+	</DIV>
+<!--
+this section of code creates a form which uses the 'Validate' javascript to validate the 
+user input into the text field by passing it the data in the form, as created is a prompt
+to the user, using left, that tells them where to enter their name as well as a text box
+of length 25 called 'Name',using the right tag, that allows them to input a name these 
+two elements are then correctly formatted using the div tag 'big'. A button was also added
+and when clicked, firstly the javascripts validates the field to ensure that it is not 
+empty then posts the information in the text box that the user has inputted, it uses 
+the class button and is positioned using the tag 'right2', the button is called Next. 
+-->
+	</DIV>
+</DIV>
+
+</BODY>
+</HTML>

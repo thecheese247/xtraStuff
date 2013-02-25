@@ -1,0 +1,209 @@
+/*	********************************************* 
+	*				PLUS 1 CSS					*
+	*********************************************
+	
+	Author:		Luke Cheeseman
+	Name:		Plus1.css
+	Date:		25/01/2012
+	Description:	
+
+	This the a css page detailing all of the classes and DIV tags that will be used
+	in the Plus1 system, this will be used whenever an object is created	
+*/
+
+/* this is altering the defaults for the normal tags*/
+BODY		{	color: #000000;
+				background: #FFFFFF;
+				font-family: Comic Sans MS, Verdana, Geneva, Arial, Helvetica, Times-new-roman, sans-serif; 
+				font-style: normal;
+				font-size: 100%}
+/*
+This is assigining default values for any thing that is created in 
+the page body including
+*/
+A			{	color: #000000	}
+
+H1			{	display: block;
+				color: #000000;
+				font-weight: bold;
+				font-size: 16pt;
+				text-align: left}
+/*
+This is for headings, the font style is different so that it stands
+out from the rest of the page
+*/
+
+IMG			{	border:0px none}
+
+/* 
+These are created classes that will be called thoughout the program,
+these have assigned attributes
+ */
+.Heading	{	position:absolute;
+				top:20%;
+				left:22%;
+				width:78%;
+				height:5%;
+				color: #000000;
+				border:0px none;
+				font-family: "Comic Sans MS", cursive;
+				
+				font-variant: normal;
+				text-decoration: underline}
+
+.Logo		{	position:absolute;
+				z-index:2;
+				top:1%;
+				left:1%;
+				width:15%;
+				height:10%;
+				border:0px none;
+				margin:0px}
+
+.Body		{	position:absolute;
+				top:20%;
+				left:22%;
+				width:78%;}
+
+.TBody		{	position:absolute;
+				top:15%;
+				left:15%;
+				width:78%;
+				font-size: 26px;
+				font-style: normal;
+				font-weight: bold;}
+/*
+This body class is used for positioning elements on the page, 
+anything created within this class, will be placed using
+this positing attributes as well as their own
+*/					
+.AltBody	{	position:absolute;
+				left:10%;
+				top:35%;
+				width:78%;
+				text-align: center}
+
+.Body A:hover	{	color: #FFFFFF; 
+					background-color: #0000CC}
+
+.Bottom		{	position:absolute;
+				right: 0%;
+				bottom: 0%}
+				
+.button		{	font-family: Comic Sans MS, Verdana, Geneva, Arial, Helvetica, Times-new-roman, sans-serif; 
+				font-size:16pt}
+				
+.big		{	font-size: 20pt;
+				font-family: Comic Sans MS, Verdana, Geneva, Arial, Helvetica, Times-new-roman, sans-serif }
+
+/*
+this increases the size of the font and keeps the Comic Sans MS font
+this can be used for all tags and can be used to change the font for
+input boxes
+*/
+			
+.Question	{	position:absolute;
+				left: 0%;
+				width:30%;
+				text-align: right;
+				font-size: 42pt;
+				font-weight: bold}
+/*
+This tag is used for positioning the questions so that they are 0%from the
+left of the right edge of the body, it is also used to create the correct
+formatting for the question.
+*/
+.Answer		{	font-family: Comic Sans MS, Verdana, Geneva, Arial, Helvetica, Times-new-roman, sans-serif; 
+				font-size:42pt;
+				font-weight: bold}
+/*
+This tag is used for positioning the Answers so that they appear 
+immediately to the right of the question, it is also used to create the 
+correct formatting for the answer to match the questions formatting and
+also change the default input box formatting
+.
+*/
+.Center		{	text-align: center}
+/*
+This aligns the text in the centre of the page
+*/
+
+.Left		{	position:absolute;
+				left: 0%;
+				width:25%;
+				text-align: right}
+/*
+This creates and element which is as to the left of the screen
+as possible and is as wide as 25% the size of the screen also
+alinging any text within it to the right
+*/				
+.Left2		{	position:absolute;
+				left: 0%;
+				width:25%;
+				text-align: left}
+
+				
+.AnsRight	{	position:relative;
+				left: 30%;
+				width:75%}
+/*
+This creates and element which is 30% from the left of the screen
+as possible and is as wide as 75% the size of the screen
+*/
+
+.Right		{	position:relative;
+				left: 25%;
+				width:75%}	
+/*
+This creates and element which is 25% from the left of the screen
+as possible and is as wide as 75% the size of the screen
+*/
+.Right2		{	position:relative;
+				left: 25%;
+				width:50%;
+				text-align: right}		
+				
+.MoreRight	{	position:relative;
+				right: 10%;
+				text-align: right}
+
+/*
+this creates an element which is right-aligned instead
+of left to create an object which is more to the right
+of the page
+*/				
+
+.Form		{	position:absolute;
+				left:0%;
+				width:100%;
+				color: #000000;}
+/*
+This is used for forms, giving default values for its contents
+it is on the left of the screen and is as wide as the available
+area, also assigning the text colour as black
+*/
+.leftcol  {		position:absolute;
+				z-index:1;
+				top:0%;
+				left:1%;
+				width:180px;
+				height:100%;				
+				margin:0;
+				padding:0}
+/*
+This creates a column of the left of the screen that is 180px
+wide, reducing the available area left of the screen, it is a 
+high as the entire screen, this can be used for placing other
+elements at this place of the screen
+*/
+.leftcol2  {		position:absolute;
+				z-index:1;
+				top:20%;
+				left:1%;
+				width:180px;
+				height:100%;
+				
+				margin:0;
+				padding:0}
+
+						

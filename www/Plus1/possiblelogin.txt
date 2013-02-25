@@ -1,0 +1,179 @@
+<?php
+$conn = MYSQL_CONNECT('localhost', 'root', '')
+			or die('Could not connect to server');
+	MYSQL_SELECT_DB('plus1', $conn)
+			or die('Could not select the database');
+			
+if	((isset($_POST['Submit'])) OR  (isset($_POST['Addq'])))
+{
+	if 
+	$uname = TRIM($_POST['Username']);
+	$pword = TRIM($_POST['Password']);
+	$query = "SELECT *
+				FROM teacher
+				WHERE
+				username = '$uname'
+				AND
+				password = PASSWORD('$pword')";
+	$result = MYSQL_QUERY($query);
+	if((MYSQL_NUM_ROWS($result) !== 0) OR  (isset($_POST['Addq'])))
+	{
+		echo
+		"
+		<HTML lang='en'>
+		<HEAD>
+		<LINK REL='stylesheet' HREF='Plus1.css' TYPE='text/css'>
+		<TITLE>Add Question</TITLE>
+		<META http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+		<SCRIPT Language='JavaScript' type='text/JavaScript' src='default.js'></SCRIPT>
+		</HEAD>
+
+		<BODY>
+
+		<SCRIPT Language='JavaScript' type='text/JavaScript'>
+		start();
+		</SCRIPT>
+		<SCRIPT Language='JavaScript' type='text/JavaScript' src='ValidateFields.js'></SCRIPT>
+
+		<DIV CLASS='Body'>
+
+			<H1>Please complete all fields and click submit to add a question<H1>
+			<br>
+			<DIV Class='Form'>
+			<FORM METHOD='POST' ACTION='Confirmation.php' onSubmit='return Validate(this)'>
+			<DIV Class='Left'>Question:</Div>
+			<DIV class='Right'>
+				<INPUT TYPE='text' NAME='Question' Size=50>
+			</DIV>
+			<DIV Class='Left'>Answer:</Div>
+			<DIV class='Right'>
+				<INPUT TYPE='text' NAME='Answer' Size=50>
+			</DIV>
+			<DIV Class='Left'>Topic:</Div>
+			<DIV Class='Right'>
+				<SELECT NAME='Topic'>
+					<OPTION VALUE=''>--Topic--
+					<OPTION VALUE='3'>Multiplication
+					<OPTION VALUE='4'>Division
+					<OPTION VALUE='5'>Fractions
+					<OPTION VALUE='6'>Decimals
+					<OPTION VALUE='7'>Shapes
+					<OPTION VALUE='8'>Ordering Numbers
+					<OPTION VALUE='9'>Ordering Decimals
+				</SELECT>
+			</DIV>
+			<DIV Class='Left'>Difficulty:</Div>
+			<DIV Class='Right'>
+				<SELECT NAME='Difficulty'>
+					<OPTION VALUE=''>--Difficulty--
+					<OPTION VALUE='1'>1
+					<OPTION VALUE='2'>2
+					<OPTION VALUE='3'>3
+					<OPTION VALUE='4'>4
+					<OPTION VALUE='5'>5
+				</SELECT>
+			<br>
+			<br>
+			</DIV>
+			<DIV Class='Right'>	
+				<INPUT TYPE='submit' Value='submit'>
+			</DIV>
+			</FORM>
+			</DIV>
+		</DIV>
+		</BODY>
+		</HTML>
+		";
+	}
+	else
+	{
+		echo
+		"
+		<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>
+		<HTML lang='en'>
+		<HEAD>
+		<LINK REL='stylesheet' HREF='Plus1.css' TYPE='text/css'>
+		<TITLE>Teacher Login</TITLE>
+		<META http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+		<SCRIPT Language='JavaScript' type='text/JavaScript' src='default.js'></SCRIPT>
+		</HEAD>
+
+		<BODY>
+
+		<SCRIPT Language='JavaScript' type='text/JavaScript'>
+		start();
+		</SCRIPT>
+		<SCRIPT Language='JavaScript' type='text/JavaScript' src='ValidateLogin.js'></SCRIPT>
+
+		<DIV CLASS='Body'>
+
+			<H1>Login failed.  Please check your username and password.<H1>
+			<br>
+			<DIV Class='Form'>
+			<FORM METHOD='POST' ACTION='Login.php' onSubmit='return Validate(this)'>
+			<DIV Class='Left'>Username:</Div>
+			<DIV class='Right'>
+				<INPUT TYPE='text' NAME='Username' Size=50>
+			</DIV>
+			<DIV Class='Left'>Password:</Div>
+			<DIV class='Right'>
+				<INPUT TYPE='text' NAME='Password' Size=50>
+			</DIV>
+			<br>
+			<DIV Class='Right'>
+				<INPUT TYPE='Submit' Name='Submit' Value='Submit'>
+			</DIV>
+			</FORM>
+			</DIV>
+		</DIV>
+		</BODY>
+		</HTML>
+		";
+	}
+}
+else
+{
+	echo
+	"
+	<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>
+	<HTML lang='en'>
+	<HEAD>
+	<LINK REL='stylesheet' HREF='Plus1.css' TYPE='text/css'>
+	<TITLE>Teacher Login</TITLE>
+	<META http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+	<SCRIPT Language='JavaScript' type='text/JavaScript' src='default.js'></SCRIPT>
+	</HEAD>
+
+	<BODY>
+
+	<SCRIPT Language='JavaScript' type='text/JavaScript'>
+	start();
+	</SCRIPT>
+	<SCRIPT Language='JavaScript' type='text/JavaScript' src='ValidateLogin.js'></SCRIPT>
+
+	<DIV CLASS='Body'>
+
+		<H1>To add a question you must first login<H1>
+		<br>
+		<DIV Class='Form'>
+		<FORM METHOD='POST' ACTION='Login.php' onSubmit='return Validate(this)'>
+		<DIV Class='Left'>Username:</Div>
+		<DIV class='Right'>
+			<INPUT TYPE='text' NAME='Username' Size=50>
+		</DIV>
+		<DIV Class='Left'>Password:</Div>
+		<DIV class='Right'>
+			<INPUT TYPE='text' NAME='Password' Size=50>
+		</DIV>
+		<br>
+		<DIV Class='Right'>
+			<INPUT TYPE='Submit' Name='Submit' Value='Submit'>
+		</DIV>
+		</FORM>
+		</DIV>
+	</DIV>
+	</BODY>
+	</HTML>
+	";
+}
+?>

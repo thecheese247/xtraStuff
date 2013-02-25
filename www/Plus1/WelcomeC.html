@@ -1,0 +1,64 @@
+<!--
+	********************************************* 
+	*			PLUS 1 WELCOME SCREEN			*
+	*********************************************
+	
+	Author:		Luke Cheeseman
+	Name:		welcome.html
+	Date:		16/01/2012
+	Description:	
+
+	This is the welcome screen for the game where the user will
+	be given and welcome message to the game and can then enter 
+	their name and then click progress to continue to the topic 
+	selection screen
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="en">
+<HEAD>
+<LINK REL="stylesheet" HREF="Plus1.css" TYPE="text/css">
+<TITLE>Welcome</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<SCRIPT Language="JavaScript" type="text/JavaScript" src="default.js"></SCRIPT>		
+<!--this line creates the default page-->
+</HEAD>
+
+<BODY>
+
+<SCRIPT Language="JavaScript" type="text/JavaScript">
+start();
+</SCRIPT>
+
+
+<DIV CLASS="Body">
+	<H1>Welcome to Plus 1, please enter your name and click next to continue</H1>
+<!--
+this line writes a greeting message to the user instructing them on what to do to
+continue to the next screen, it uses the H1 tag and style. A line break follows
+this
+-->
+    <br>
+ 	<DIV Class="Form">
+	<FORM METHOD="POST" ACTION="">
+	<DIV Class="Left">Enter Name Here:</Div>
+	<DIV Class="Right">
+		<INPUT TYPE="text" NAME="Name" Size=25>		
+	</DIV>
+	<br>
+	<br>
+	<DIV Class="Right">	
+		<INPUT TYPE="submit" Name="Next" Value="Next>>" Class="button">
+	</DIV>
+	</FORM> 
+	</DIV>
+<!--
+this section of code creates a form, as well as a prompt to the user, using left,
+that tells them where to enter their name as well as a text box of length 25 called
+'Name',using the right tag, that allows them to input a name. A button was also 
+added in anticipation of later functionality being added, it uses the class button
+and is positioned using the tag right, the button is called Next 
+-->
+</DIV>
+
+</BODY>
+</HTML>
