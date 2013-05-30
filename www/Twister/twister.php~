@@ -96,7 +96,7 @@ if ((isset($_POST['Play'])) or (isset($_SESSION['Progress'])))
 					</HTML>
 					";
 		}
-	
+	}
 }
 else
 {
